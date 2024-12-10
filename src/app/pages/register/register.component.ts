@@ -3,6 +3,7 @@ import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../autenticacao/auth.service';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { AuthService } from '../../autenticacao/auth.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
   standalone: true,
-  imports: [ReactiveFormsModule, RouterLink],
+  imports: [ReactiveFormsModule, RouterLink, CommonModule],
 })
 export class RegisterComponent {
 

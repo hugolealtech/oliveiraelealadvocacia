@@ -5,6 +5,11 @@ html, body {
   justify-content: center;
   align-items: center;
   background-color: #f4f4f4;
+  
+}
+
+.form-control{
+  background-color: #bb935d;
 }
 
 .content-container {
@@ -16,7 +21,7 @@ html, body {
 }
 
 .login-container {
-  background-color: #2f2f2f;
+  background-color: #0c403798;
   border-radius: 8px;
   box-shadow: rgb(31 31 31 / 17%) 0px -23px 25px 0px inset,
     rgb(108 108 108 / 23%) 0px -36px 30px 0px inset,
@@ -69,7 +74,7 @@ html, body {
 }
 
 .input-group input:focus {
-  border-color: #0173ed;
+  border-color: #bb935d ;
   outline: none;
 }
 
@@ -78,7 +83,7 @@ button {
   padding: 15px;
   border: none;
   border-radius: 8px;
-  background-color: #0173ed94;
+  background-color: #bb935d ;
   color: #ffffff;
   font-size: 16px;
   font-weight: 500;
@@ -89,7 +94,7 @@ button {
 }
 
 button:hover {
-  background-color: #0173ed;
+  background-color: #01edcdae;
 }
 
 .bottom-text {
@@ -103,11 +108,11 @@ button:hover {
 }
 
 .bottom-text a {
-  color: #0173ed;
+  color: #b7d141;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .bottom-text a:hover {
-  color: #3f95f2;
+  color: #94e1be;
 }

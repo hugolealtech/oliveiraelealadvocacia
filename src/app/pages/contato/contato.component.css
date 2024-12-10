@@ -1,0 +1,35 @@
+/* Garantir que o formulário seja responsivo */
+.container {
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+ 
+    margin-bottom: 400px;
+    margin-top: 400px;
+  }
+  
+  /* Ajuste no tamanho dos campos em telas pequenas */
+  @media (max-width: 767px) {
+    .form-group label {
+      font-size: 14px;
+    }
+  
+    .form-control {
+      font-size: 14px;
+    }
+  
+    .btn {
+      font-size: 14px;
+    }
+  }
+  
+  /* Estilos para o botão de envio */
+  .btn {
+    width: 100%;
+  }
+  
+  /* Mensagens de erro */
+  .text-danger {
+    font-size: 12px;
+  }
+  

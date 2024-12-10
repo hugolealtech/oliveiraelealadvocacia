@@ -1,1 +1,64 @@
-<p>contato works!</p>
+<div class="container mt-5 mg-30">
+    <h2 class="text-center mb-4">Formulário de Contato</h2>
+    
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+      <div class="row">
+        <!-- Nome -->
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input
+              id="name"
+              formControlName="name"
+              type="text"
+              class="form-control"
+              placeholder="Digite seu nome"
+            />
+            <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="text-danger">
+              Nome é obrigatório.
+            </div>
+          </div>
+        </div>
+  
+        <!-- E-mail -->
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input
+              id="email"
+              formControlName="email"
+              type="email"
+              class="form-control"
+              placeholder="Digite seu e-mail"
+            />
+            <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="text-danger">
+              E-mail é obrigatório e deve ser válido.
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Mensagem -->
+      <div class="form-group mt-3">
+        <label for="message">Mensagem</label>
+        <textarea
+          id="message"
+          formControlName="message"
+          rows="4"
+          class="form-control"
+          placeholder="Digite sua mensagem"
+        ></textarea>
+        <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="text-danger">
+          Mensagem é obrigatória.
+        </div>
+      </div>
+  
+      <!-- Botão de Enviar -->
+      <div class="text-center mt-4">
+        <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">
+          Enviar
+        </button>
+      </div>
+    </form>
+  </div>
+  

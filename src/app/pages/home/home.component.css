@@ -1,7 +1,9 @@
+
 .carousel-item {
     width: 100%; /* Faz a imagem ocupar 100% da largura do carrossel */
-    height: 290px; /* Ajuste a altura do carrossel */
+    height: 500px; /* Ajuste a altura do carrossel */
     object-fit: cover; /* Mantém a imagem sem distorção */
+
 }
 
 .carousel-item img {
@@ -51,7 +53,7 @@
 
 /* Alteração no efeito de hover */
 .carousel-caption a:hover {
-    background-color: #79797999; /* Cor do botão mais intensa quando em hover */
+    background-color: #21b67d99; /* Cor do botão mais intensa quando em hover */
     backdrop-filter: blur(12px); /* Aumenta o desfoque no hover */
 }
 
@@ -74,19 +76,19 @@
   background-color: rgba(25, 0, 0, 0.8); /* Fundo mais escuro ao passar o mouse */
 }
 
-/* Exemplo de imagem de fundo em CSS (local):
+ /* Exemplo de imagem de fundo em CSS (local): */
 .carousel-item {
-    background-image: url('/assets/images/exemplo.jpg');
+    background-image: url('../../../../public/lawOffice.jpg');
     background-size: cover;
     background-position: center;
-} */
+} 
 
 /* Exemplo de imagem de fundo em CSS (externa): */
-.carousel-item {
+/* .carousel-item {
     background-image: url('https://i.pinimg.com/736x/34/2c/be/342cbeb402458d09929f86f3085c5468.jpg');
     background-size: cover;
     background-position: center;
-}
+} */
 
 
 body{
@@ -98,7 +100,7 @@ body{
 	-webkit-font-smoothing: antialiased;
   font-family: "Epilogue", sans-serif;
   margin: 0;
-  background: #fff;
+  background: #26733887;
 }
 * {
 	box-sizing: border-box;
@@ -238,6 +240,8 @@ body{
     flex: 0 0 auto;
     width: 100%;
     margin-bottom: 20px;
+    background-color: #000;
+    position:absolute;
 }
 .card-details{
     width: 100%;
