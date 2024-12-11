@@ -1,31 +1,48 @@
-<div class="content-container">
-  <div class="login-container">
-    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="login-form">
+<div *ngIf="sessao$ | async as sessao; else menuNaoLogado">
+  <div class="content-container">
+    <div class="login-container">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" class="login-form">
+        <p class="heading">Login</p>
+        <p class="paragraph">Autenticação Firebase</p>
 
-      <p class="heading">Login</p>
-      <p class="paragraph">Autenticação Firebase</p>
+        <!-- Exibindo a mensagem de erro -->
+        <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
 
-      <!-- Exibindo a mensagem de erro -->
-      @if (errorMessage) {
-        <div class="error-message">{{ errorMessage }}</div>
-      }
+        <!-- Formulário de login -->
+        <div class="input-group">
+          <input
+            type="text"
+            placeholder="Email"
+            formControlName="email"
+            id="email"
+            class="form-control"
+          />
+        </div>
 
-      <!-- Formulário de login -->
-      <div class="input-group">
-        <input type="text" placeholder="Email" formControlName="email" id="email" class="form-control" />
-      </div>
+        <div class="input-group">
+          <input
+            type="password"
+            placeholder="Senha"
+            formControlName="password"
+            id="password"
+            class="form-control"
+          />
+        </div>
 
-      <div class="input-group">
-        <input type="password" placeholder="Senha" formControlName="password" id="password" class="form-control" />
-      </div>
-      
-      <button type="submit">Entrar</button>
+        <button type="submit">Entrar</button>
 
-      <div class="bottom-text">
-        <p>Você não tem uma conta? <a routerLink="/register">Registre-se</a></p>
-        <p><a href="#">Esqueceu a senha?</a></p>
-      </div>
-
-    </form>
+        <div class="bottom-text">
+          <p>
+            Você não tem uma conta?
+            <a routerLink="/register">Registre-se</a>
+          </p>
+          <p><a href="#">Esqueceu a senha?</a></p>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
+
+<ng-template #menuNaoLogado>
+  <p class="not-logged-message">Você não está logado. Faça login para continuar.</p>
+</ng-template>

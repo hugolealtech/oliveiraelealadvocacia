@@ -8,15 +8,30 @@ import { RegisterComponent } from './pages/register/register.component';
 import { ClientComponent } from './pages/client/client.component';
 import { DashboardAuthGuard } from './autenticacao/auth.guard';
 import { HeaderComponent } from './components/header/header.component';
+import { AdvogadosComponent } from './components/advogados/advogados.component';
+import { BPCComponent } from './pages/bpc/bpc.component';
+import { CivelComponent } from './pages/civel/civel.component';
+import { EmpresarialComponent } from './pages/empresarial/empresarial.component';
+import { PensaoMorteComponent } from './pages/pensao-morte/pensao-morte.component';
+import { PlanejamentoPrevidenciarioComponent } from './pages/planejamento-previdenciario/planejamento-previdenciario.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent}, // Rota raiz
     { path: 'home', component: HomeComponent},
-    {path:'header', component: HeaderComponent},
+    { path: '', redirectTo: '/home', pathMatch: 'full',},    
+    { path: 'header', component: HeaderComponent},
     { path: 'login', component: LoginComponent},
+    { path: 'advogados', component: AdvogadosComponent},
     { path: 'contato', component: ContatoComponent},
     { path: 'meeting', component: MeetingComponent},  
     { path: 'dashboard', component: DashboardComponent, canActivate: [DashboardAuthGuard]},
     { path: 'register', component: RegisterComponent },
     { path: 'client', component: ClientComponent},
+    { path:  'bpc', component:BPCComponent},
+    { path:  'civel', component: CivelComponent},
+    { path:  'empresarial', component: EmpresarialComponent},
+    { path: 'pensao-morte', component: PensaoMorteComponent},
+    { path: 'planejamento-previdenciario', component: PlanejamentoPrevidenciarioComponent},
+    { path: 'about-us', component: AboutUsComponent},
+
 ]
