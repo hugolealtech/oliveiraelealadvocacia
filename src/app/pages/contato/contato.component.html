@@ -12,8 +12,7 @@
               formControlName="name"
               type="text"
               class="form-control"
-              placeholder="Digite seu nome"
-            />
+              placeholder="Digite seu nome"/>
             <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="text-danger">
               Nome é obrigatório.
             </div>

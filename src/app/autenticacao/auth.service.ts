@@ -29,7 +29,7 @@ export class AuthService {
   }
 
   isLoggedIn(): boolean {
-    return !!this.sessao.value; // Verifica se há um usuário logado
+    return !this.sessao.value; // Verifica se há um usuário logado
   }
 
   logout(): void {

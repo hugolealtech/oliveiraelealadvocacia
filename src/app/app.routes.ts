@@ -3,7 +3,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ContatoComponent } from './pages/contato/contato.component';
 import { MeetingComponent } from './pages/meeting/meeting.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { DashboardComponent} from './pages/dashboard/dashboard.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { ClientComponent } from './pages/client/client.component';
 import { DashboardAuthGuard } from './autenticacao/auth.guard';
@@ -42,6 +42,6 @@ export const routes: Routes = [
     { path: 'livia',component:LiviaComponent},
     { path: 'brisa', component: BrisaComponent},
     { path: 'parceiros', component: ParceirosComponent},
-    { path: 'under-construction',component:UnderConstructionComponent}
+    { path: 'under-construction',component:UnderConstructionComponent},
 
 ]

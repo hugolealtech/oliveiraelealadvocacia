@@ -3,7 +3,7 @@ import { UnderConstructionComponent } from '../../components/under-construction/
 
 @Component({
   selector: 'app-dashboard',
-  imports: [UnderConstructionComponent],
+  imports: [],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
