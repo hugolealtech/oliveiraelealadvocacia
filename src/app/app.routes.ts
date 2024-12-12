@@ -15,6 +15,10 @@ import { EmpresarialComponent } from './pages/empresarial/empresarial.component'
 import { PensaoMorteComponent } from './pages/pensao-morte/pensao-morte.component';
 import { PlanejamentoPrevidenciarioComponent } from './pages/planejamento-previdenciario/planejamento-previdenciario.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { HugoComponent } from './pages/hugo/hugo.component';
+import { LiviaComponent } from './pages/livia/livia.component';
+import { BrisaComponent } from './pages/brisa/brisa.component';
+import { ParceirosComponent } from './pages/parceiros/parceiros.component';
 
 export const routes: Routes = [
     { path: 'home', component: HomeComponent},
@@ -27,11 +31,15 @@ export const routes: Routes = [
     { path: 'dashboard', component: DashboardComponent, canActivate: [DashboardAuthGuard]},
     { path: 'register', component: RegisterComponent },
     { path: 'client', component: ClientComponent},
-    { path:  'bpc', component:BPCComponent},
-    { path:  'civel', component: CivelComponent},
-    { path:  'empresarial', component: EmpresarialComponent},
+    { path: 'bpc', component:BPCComponent},
+    { path: 'civel', component: CivelComponent},
+    { path: 'empresarial', component: EmpresarialComponent},
     { path: 'pensao-morte', component: PensaoMorteComponent},
     { path: 'planejamento-previdenciario', component: PlanejamentoPrevidenciarioComponent},
     { path: 'about-us', component: AboutUsComponent},
+    { path: 'hugo', component:HugoComponent},
+    { path: 'livia',component:LiviaComponent},
+    { path: 'brisa', component: BrisaComponent},
+    { path: 'parceiros', component: ParceirosComponent},
 
 ]
