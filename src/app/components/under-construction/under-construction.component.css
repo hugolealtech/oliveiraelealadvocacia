@@ -1,0 +1,43 @@
+.p-construcao {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf2dc;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+} */
+
+.construction-container {
+    text-align: center;
+    padding: 20px;
+    border: 2px dashed #ff9800;
+    border-radius: 10px;
+    background-color: #fff9e6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.construction-container h1 {
+    font-size: 2.5rem;
+    color: #ff9800;
+    margin-bottom: 10px;
+}
+
+.construction-container .fun-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.construction-container .construction-image img {
+    width: 200px;
+    height: auto;
+    margin: 20px 0;
+}
+
+.construction-container .cta {
+    font-size: 1rem;
+    color: #555;
+}
