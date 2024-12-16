@@ -18,8 +18,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AuthService } from './autenticacao/auth.service';
 import { HeaderComponent } from './components/header/header.component';
 import { OnInit } from '@angular/core';
-import { LoginAdministrativoComponent } from './components/login-administrativo/login-administrativo.component';
-import { AdministrativoDashboardComponent } from './components/administrativo-dashboard/administrativo-dashboard.component';
 
 
 @Component({
@@ -31,8 +29,6 @@ import { AdministrativoDashboardComponent } from './components/administrativo-da
     RouterOutlet,
     HeaderComponent,
     NavbarComponent,
-    LoginAdministrativoComponent,
-    AdministrativoDashboardComponent,
     FooterComponent,
     AdvogadosComponent,
     BPCComponent,

@@ -4,7 +4,7 @@ import { BrisaComponent } from '../../pages/brisa/brisa.component';
 
 @Component({
   selector: 'app-advogados',
-  imports: [RouterLink, BrisaComponent],
+  imports: [RouterOutlet, RouterLink, BrisaComponent],
   templateUrl: './advogados.component.html',
   styleUrl: './advogados.component.css'
 })
