@@ -43,5 +43,6 @@ export const routes: Routes = [
     { path: 'brisa', component: BrisaComponent},
     { path: 'parceiros', component: ParceirosComponent},
     { path: 'under-construction',component:UnderConstructionComponent},
+    
 
 ]

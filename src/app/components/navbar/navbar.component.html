@@ -1,6 +1,6 @@
 <nav id="navbar" class="navbar navbar-expand-lg bg-dark" aria-label="Eleventh navbar example">
     <div class="container-fluid">
-      <a class="navbar-brand text-white" routerLink="/">Advocacia</a>
+      <a class="navbar-brand text-white" routerLink="/">HOME</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -11,7 +11,7 @@
             <a class="nav-link active text-white" aria-current="page" routerLink="/contato">Contato</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" routerLink="/login">Login</a>
+            <a class="nav-link text-white" routerLink="/faq">FAQ</a>
           </li>
           <li class="nav-item">
             <a class="nav-link enable text-white" routerLink="/dashboard">Advogado</a>
@@ -20,7 +20,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="true">Administrativo</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item text-black" routerLink="/login">Área do Cliente</a></li>
+          
               <li><a class="dropdown-item text-black" routerLink="/dashboard">Área Administrativa</a></li>
               <li><a class="dropdown-item text-black" routerLink="/master">Área do Advogado</a></li>
             </ul>
@@ -28,9 +28,19 @@
 
         </ul>
 
-        <form role="search">
-          <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+        <form role="search" (ngSubmit)="onSearch()" #searchForm="ngForm">
+          <input
+            class="form-control"
+            type="search"
+            placeholder="Pesquisar"
+            aria-label="Pesquisar"
+            [(ngModel)]="searchQuery"
+            name="query"
+            required
+          />
         </form>
+        
+        
       </div>
     </div>
   </nav>

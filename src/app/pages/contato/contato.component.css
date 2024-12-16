@@ -1,35 +1,45 @@
-/* Garantir que o formulário seja responsivo */
-.container {
-    max-width: 600px;
-    display: flex;
-    flex-wrap: wrap;
- 
-    margin-bottom: 400px;
-    margin-top: 400px;
-  }
-  
-  /* Ajuste no tamanho dos campos em telas pequenas */
-  @media (max-width: 767px) {
-    .form-group label {
-      font-size: 14px;
-    }
-  
-    .form-control {
-      font-size: 14px;
-    }
-  
-    .btn {
-      font-size: 14px;
-    }
-  }
-  
-  /* Estilos para o botão de envio */
-  .btn {
-    width: 100%;
-  }
-  
-  /* Mensagens de erro */
-  .text-danger {
-    font-size: 12px;
-  }
-  
+.contact-form {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.contact-form h2 {
+  color: #343a40;
+  font-weight: 600;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #495057;
+}
+
+.form-control {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+.text-danger {
+  font-size: 13px;
+}
