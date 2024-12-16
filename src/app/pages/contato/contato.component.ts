@@ -1,29 +1,54 @@
-import { CommonModule } from '@angular/common';
-import { Component} from '@angular/core';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule  } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import emailjs from '@emailjs/browser';
 
 @Component({
+  standalone:true,
   selector: 'app-contato',
-  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './contato.component.html',
-  styleUrl: './contato.component.css'
+  styleUrls: ['./contato.component.css'],
+  imports:[ReactiveFormsModule]
 })
 export class ContatoComponent {
   contactForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
-      name: ['', [Validators.required]],
+      name: ['', Validators.required],
+      telefone: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
       email: ['', [Validators.required, Validators.email]],
-      message: ['', [Validators.required]]
+      message: ['', Validators.required],
     });
   }
 
   onSubmit(): void {
     if (this.contactForm.valid) {
-      console.log('Formulário enviado:', this.contactForm.value);
+      const formData = this.contactForm.value;
+
+      emailjs
+        .send(
+          'service_hbqeiv9', // Substitua pelo seu Service ID
+          'template_nu94t26', // Substitua pelo seu Template ID
+          {
+            name: formData.name,
+            telefone: formData.telefone,
+            email: formData.email,
+            message: formData.message,
+          },
+          '6OmwV3Y29ZXQxiAt2' // Substitua pela sua Public Key
+        )
+        .then(
+          (response) => {
+            alert('Mensagem enviada com sucesso!');
+            this.contactForm.reset();
+          },
+          (error) => {
+            alert('Erro ao enviar mensagem. Tente novamente.');
+            console.error('Erro:', error);
+          }
+        );
     } else {
-      console.log('Formulário inválido');
+      alert('Por favor, preencha todos os campos corretamente.');
     }
   }
 }
