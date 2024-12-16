@@ -46,7 +46,7 @@ export const routes: Routes = [
     { path: 'parceiros', component: ParceirosComponent},
     { path: 'under-construction',component:UnderConstructionComponent},
     { path: 'faq', component:FaqComponent}, 
-    // { path: 'login-cliente',component:LoginComponent},
+  
 
 
 
