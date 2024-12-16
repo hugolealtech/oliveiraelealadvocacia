@@ -29,7 +29,7 @@ export const routes: Routes = [
     { path: 'advogados', component: AdvogadosComponent},
     { path: 'contato', component: ContatoComponent},
     { path: 'meeting', component: MeetingComponent},  
-    { path: 'dashboard', component: DashboardComponent, canActivate: [DashboardAuthGuard]},
+    { path: 'dashboard', component: DashboardComponent}, //canActivate: [DashboardAuthGuard]},
     { path: 'register', component: RegisterComponent },
     { path: 'client', component: ClientComponent},
     { path: 'bpc', component:BPCComponent},

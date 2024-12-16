@@ -32,7 +32,7 @@ export class RegisterComponent {
       .register(rawForm.email, rawForm.username, rawForm.password)
       .subscribe(
         () => {
-          this.router.navigateByUrl('/principal');
+          this.router.navigateByUrl('/dashboard');
           alert('Você logou com sucesso!');
         },
         (error) => {
