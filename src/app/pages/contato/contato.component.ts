@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import emailjs from '@emailjs/browser';
@@ -7,7 +8,7 @@ import emailjs from '@emailjs/browser';
   selector: 'app-contato',
   templateUrl: './contato.component.html',
   styleUrls: ['./contato.component.css'],
-  imports:[ReactiveFormsModule]
+  imports:[ReactiveFormsModule, CommonModule]
 })
 export class ContatoComponent {
   contactForm: FormGroup;

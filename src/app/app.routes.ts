@@ -22,6 +22,8 @@ import { ParceirosComponent } from './pages/parceiros/parceiros.component';
 import { UnderConstructionComponent } from './components/under-construction/under-construction.component';
 import { FactorId } from '@angular/fire/auth';
 import { FaqComponent } from './pages/faq/faq.component';
+import { LoginAdministrativoComponent } from './components/login-administrativo/login-administrativo.component';
+import { AdministrativoDashboardComponent } from './components/administrativo-dashboard/administrativo-dashboard.component';
 
 export const routes: Routes = [
     { path: 'home', component: HomeComponent},
@@ -46,6 +48,8 @@ export const routes: Routes = [
     { path: 'parceiros', component: ParceirosComponent},
     { path: 'under-construction',component:UnderConstructionComponent},
     { path: 'faq', component:FaqComponent}, 
+    { path: 'login-administrativo', component: LoginAdministrativoComponent },
+    { path: 'advogados', component: AdvogadosComponent },
   
 
 
