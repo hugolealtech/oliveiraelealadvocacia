@@ -3,7 +3,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-under-construction',
-  imports: [RouterLink,RouterOutlet],
+  imports: [RouterLink],
   templateUrl: './under-construction.component.html',
   styleUrl: './under-construction.component.css'
 })

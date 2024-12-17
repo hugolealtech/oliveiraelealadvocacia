@@ -1,0 +1,20 @@
+/* about-us.component.css */
+.about-us {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .about-us h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .about-us p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  

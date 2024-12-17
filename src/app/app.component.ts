@@ -12,12 +12,16 @@ import { PlanejamentoPrevidenciarioComponent } from './pages/planejamento-previd
 import { EmpresarialComponent } from './pages/empresarial/empresarial.component';
 import { CivelComponent } from './pages/civel/civel.component';
 
+
 import { Observable } from 'rxjs';
 import { SessaoService } from './sessao.service';
 import { FooterComponent } from './components/footer/footer.component';
 import { AuthService } from './autenticacao/auth.service';
 import { HeaderComponent } from './components/header/header.component';
 import { OnInit } from '@angular/core';
+import { DashboardAuthGuard } from './autenticacao/auth.guard';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+
 
 
 @Component({
@@ -36,10 +40,15 @@ import { OnInit } from '@angular/core';
     PlanejamentoPrevidenciarioComponent,
     EmpresarialComponent,
     CivelComponent,
+    DashboardComponent,
+    DashboardAuthGuard,
+    
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
+
+
 export class AppComponent implements OnInit {
   authService = inject(AuthService); // Injeta o serviço diretamente
   http = inject(HttpClient); // Injeta o HttpClient diretamente
@@ -51,6 +60,7 @@ export class AppComponent implements OnInit {
   logout(): void {
     this.authService.logout();
   }
+  
 }
 
 
