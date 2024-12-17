@@ -40,9 +40,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     PlanejamentoPrevidenciarioComponent,
     EmpresarialComponent,
     CivelComponent,
-    DashboardComponent,
-    DashboardAuthGuard,
-    
+    DashboardComponent, 
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],

@@ -22,7 +22,6 @@ import { ParceirosComponent } from './pages/parceiros/parceiros.component';
 import { UnderConstructionComponent } from './components/under-construction/under-construction.component';
 import { FactorId } from '@angular/fire/auth';
 import { FaqComponent } from './pages/faq/faq.component';
-import { CarousselComponent } from './components/caroussel/caroussel.component';
 
 export const routes: Routes = [
     { path: 'home', component: HomeComponent},
@@ -46,7 +45,6 @@ export const routes: Routes = [
     { path: 'brisa', component: BrisaComponent},
     { path: 'parceiros', component: ParceirosComponent},
     { path: 'under-construction',component:UnderConstructionComponent},
-    { path: 'caroussel', component:CarousselComponent},
     { path: 'faq', component:FaqComponent}, 
   
 
