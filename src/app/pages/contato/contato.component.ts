@@ -15,7 +15,11 @@ export class ContatoComponent {
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
-      telefone: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
+      telefone: ['', [
+        Validators.required,
+        Validators.pattern(/^\(?[1-9]{2}\)? ?(?:9[1-9][0-9]{3}|[2-8][0-9]{3})\-?[0-9]{4}$/)
+      ]],
+      
       email: ['', [Validators.required, Validators.email]],
       message: ['', Validators.required],
     });
