@@ -19,6 +19,8 @@ import { AuthService } from './autenticacao/auth.service';
 import { HeaderComponent } from './components/header/header.component';
 import { OnInit } from '@angular/core';
 import { ListaComponent } from './pages/lista/lista.component';
+import { PoliticasComponent } from './pages/politicas/politicas.component';
+import { CasosSucessoComponent } from './pages/casos-sucesso/casos-sucesso.component';
 
 
 @Component({
@@ -34,10 +36,12 @@ import { ListaComponent } from './pages/lista/lista.component';
     AdvogadosComponent,
     BPCComponent,
     ListaComponent,
+    PoliticasComponent,
     PensaoMorteComponent,
     PlanejamentoPrevidenciarioComponent,
     EmpresarialComponent,
     CivelComponent,
+    CasosSucessoComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],

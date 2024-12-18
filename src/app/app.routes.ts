@@ -23,6 +23,8 @@ import { UnderConstructionComponent } from './components/under-construction/unde
 import { FactorId } from '@angular/fire/auth';
 import { FaqComponent } from './pages/faq/faq.component';
 import { ListaComponent } from './pages/lista/lista.component';
+import { PoliticasComponent } from './pages/politicas/politicas.component';
+import { CasosSucessoComponent } from './pages/casos-sucesso/casos-sucesso.component';
 
 export const routes: Routes = [
     { path: 'home', component: HomeComponent},
@@ -48,6 +50,8 @@ export const routes: Routes = [
     { path: 'under-construction',component:UnderConstructionComponent},
     { path: 'faq', component:FaqComponent}, 
     { path: 'lista', component:ListaComponent},
+    { path: 'politicas', component:PoliticasComponent},
+    { path: 'casos-sucesso', component:CasosSucessoComponent},
     // { path: 'login-cliente',component:LoginComponent},
 
 
