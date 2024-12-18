@@ -18,6 +18,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AuthService } from './autenticacao/auth.service';
 import { HeaderComponent } from './components/header/header.component';
 import { OnInit } from '@angular/core';
+import { ListaComponent } from './pages/lista/lista.component';
 
 
 @Component({
@@ -32,6 +33,7 @@ import { OnInit } from '@angular/core';
     FooterComponent,
     AdvogadosComponent,
     BPCComponent,
+    ListaComponent,
     PensaoMorteComponent,
     PlanejamentoPrevidenciarioComponent,
     EmpresarialComponent,
