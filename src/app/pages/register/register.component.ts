@@ -5,7 +5,6 @@ import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../autenticacao/auth.service';
 import { CommonModule } from '@angular/common';
 
-
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -14,11 +13,10 @@ import { CommonModule } from '@angular/common';
   imports: [ReactiveFormsModule, RouterLink, CommonModule],
 })
 export class RegisterComponent {
-
   fb = inject(FormBuilder);
   http = inject(HttpClient);
   router = inject(Router);
-  authService = inject(AuthService)
+  authService = inject(AuthService);
 
   form = this.fb.nonNullable.group({
     username: ['', Validators.required],
@@ -31,11 +29,15 @@ export class RegisterComponent {
   onSubmit(): void {
     const rawForm = this.form.getRawValue();
     this.authService
-    .register(rawForm.email, rawForm.username, rawForm.password)
-    .subscribe(() => {
-      this.router.navigateByUrl('/');
-    },
-    (error) => { this.errorMessage = error.message; });
+      .register(rawForm.email, rawForm.username, rawForm.password)
+      .subscribe(
+        () => {
+          this.router.navigateByUrl('/dashboard');
+          alert('Você logou com sucesso!');
+        },
+        (error) => {
+          this.errorMessage = error.message;
+        }
+      );
   }
-
 }

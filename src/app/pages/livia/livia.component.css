@@ -1,0 +1,65 @@
+
+
+.secao {
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* Ajuste conforme necessário */
+    margin: 20px auto;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;   
+    display: flex;
+
+}
+
+
+#secaoA {
+    width: 60%; /* Proporção do texto */
+    text-align: justify;
+    line-height: 2;
+}
+
+#secaoA h2 {
+  text-align: center;
+
+}
+
+#assideImageHammerOfJustice {
+    width: 50%; /* Tamanho da imagem ao lado do texto */
+    height: auto;
+    min-height: 300px; /* Garantindo altura mínima */
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#assideImageHammerOfJustice img {
+    width: 90%; /* Tamanho da imagem ao lado do texto */
+    height: auto;
+    min-height: 300px; /* Garantindo altura mínima */
+    border-radius: 15px;
+    box-shadow: 20px 20px 80px;
+   
+}
+
+
+#secaoB {
+    width: 60%; /* Proporção do texto */
+    text-align: justify;
+    line-height: 2;
+}
+
+#secaoB h2 {
+  text-align: center;
+
+}
+
+#assideImageHammerOfJustice2 {
+    padding-top: 100px;
+    width: 35%; /* Tamanho da imagem ao lado do texto */
+    height: auto;
+    min-height: 300px; /* Garantindo altura mínima */
+    border-radius: 15px;
+}

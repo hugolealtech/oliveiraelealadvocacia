@@ -134,7 +134,7 @@ html, body {
 }
 
 .login-container {
-  background-color: #0c403798;
+  background-color: #36934898;
   border-radius: 8px;
   box-shadow: rgb(31 31 31 / 17%) 0px -23px 25px 0px inset,
     rgb(108 108 108 / 23%) 0px -36px 30px 0px inset,
@@ -145,6 +145,7 @@ html, body {
   max-width: 400px;
   width: 100%;
   text-align: center;
+  margin: 100px auto 100px;
 }
 
 .login-form {
@@ -177,7 +178,7 @@ html, body {
   padding: 15px 23px;
   font-size: 16px;
   border-radius: 8px;
-  color: #979797;
+  color: #faf7f7;
   width: 80%;
   box-shadow: rgb(136 136 136 / 17%) 0px -23px 25px 0px inset,
     rgb(81 81 81 / 23%) 0px -36px 30px 0px inset,
@@ -207,7 +208,7 @@ button {
 }
 
 button:hover {
-  background-color: #01edcdae;
+  background-color: #1d4465ae;
 }
 
 .bottom-text {

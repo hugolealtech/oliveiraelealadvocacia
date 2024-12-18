@@ -1,63 +1,6 @@
 <router-outlet></router-outlet>
 
-<div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" class="active" aria-current="true" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <!-- Slide 1 -->
-      <div class="carousel-item active">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-          <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
-        </svg>
-        <div class="container">
-          <div class="carousel-caption text-justify">
-            <h1>Defendemos os direitos de idosos e pessoas com deficiência.</h1>
-            <p class="opacity-75"> Nossa missão é assegurar que os direitos daqueles que mais precisam sejam protegidos e respeitados. Com dedicação e expertise, lutamos para garantir justiça e apoio legal a quem enfrenta desafios, transformando vulnerabilidades em segurança e esperança.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Agende uma Consulta</a></p>
-          </div>
-        </div>
-      </div>
-      <!-- Slide 2 -->
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-          <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
-        </svg>
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Seu Direito, nossa missão!</h1>
-            <p> Cada caso que chega ao nosso escritório é tratado como uma missão pessoal, com dedicação absoluta e um compromisso inabalável. Você não está sozinho: transformamos sua confiança em ação, defendendo seu direito com a paixão de quem sabe o que está em jogo.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Conheça Nossos Serviços</a></p>
-          </div>
-        </div>
-      </div>
-      <!-- Slide 3 -->
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-          <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
-        </svg>
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Planejamento e estratégias para a sua melhor aposentadoria</h1>
-            <p> Nosso compromisso é construir um caminho previdenciário sólido, com estratégias personalizadas e cálculos precisos, para que você aproveite cada momento sem preocupações financeiras. Aposentar-se bem é mais do que um direito, é uma conquista, e estamos aqui para ajudá-lo a alcançá-la</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Veja Casos de Sucesso</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Anterior</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Próximo</span>
-    </button>
-  </div>
-  
-  <div></div>
+
 
   <section class="creative-cards style-one">
     <div class="container">
@@ -67,9 +10,9 @@
             <div class="card-icons">
               <img class="light-icon" src="https://imgpanda.com/upload/ib/1yIWjyG41o.png" alt="Ícone de planejamento estratégico" />
             </div>
-            <h3><a href="https://www.fiverr.com/aliali44">PLANEJAMENTO PREVIDENCIÁRIO</a></h3>
+            <h3><a routerLink="/planejamento-previdenciario">PLANEJAMENTO PREVIDENCIÁRIO</a></h3>
             <p>Planeje sua aposentadoria e veja qual regra é a mais benéfica para você!</p>
-            <a class="read-more-btn" href="https://www.fiverr.com/aliali44"><i class="fa-solid fa-angles-right"></i></a>
+            <a class="read-more-btn" routerLink="/planejamento-previdenciario"><i class="fa-solid fa-angles-right"></i></a>
           </div>
         </div>
         <div class="card-column">
@@ -77,9 +20,9 @@
             <div class="card-icons">
               <img class="light-icon" src="https://imgpanda.com/upload/ib/Q4tSh2ctkH.png" alt="Ícone de design tradicional" />
             </div>
-            <h3><a href="https://www.fiverr.com/aliali44">BPC - LOAS</a></h3>
+            <h3><a routerLink="/bpc">BPC - LOAS</a></h3>
             <p>Assitência à pessoa idosa e à pessoa deficiente e à pessoa doente!</p>
-            <a class="read-more-btn" href="https://www.fiverr.com/aliali44"><i class="fa-solid fa-angles-right"></i></a>
+            <a class="read-more-btn" routerLink="/bpc"><i class="fa-solid fa-angles-right"></i></a>
           </div>
         </div>
         <div class="card-column">
@@ -87,9 +30,9 @@
             <div class="card-icons">
               <img class="light-icon" src="https://imgpanda.com/upload/ib/YQdOwN6IDJ.png" alt="Ícone de qualidade" />
             </div>
-            <h3><a href="https://www.fiverr.com/aliali44">AÇÕES TRABALHISTAS</a></h3>
+            <h3><a routerLink="/trabalhista">AÇÕES TRABALHISTAS</a></h3>
             <p>Cálculos trabalhistas, Reclamações trabalhistas. Veja seus Direitos!</p>
-            <a class="read-more-btn" href="https://www.fiverr.com/aliali44"><i class="fa-solid fa-angles-right"></i></a>
+            <a class="read-more-btn" routerLink="/trabalhista"><i class="fa-solid fa-angles-right"></i></a>
           </div>
         </div>
 
@@ -98,9 +41,9 @@
             <div class="card-icons">
               <img class="light-icon" src="https://imgpanda.com/upload/ib/1yIWjyG41o.png" alt="Ícone de qualidade" />
             </div>
-            <h3><a href="https://www.fiverr.com/aliali44">CÍVEL</a></h3>
+            <h3><a routerLink="/civel">CÍVEL</a></h3>
             <p>Análise de Contratos,Divórcios, Inventários, Ações Possessórias, Código de Defesa do Consumidor.</p>
-            <a class="read-more-btn" href="https://www.fiverr.com/aliali44"><i class="fa-solid fa-angles-right"></i></a>
+            <a class="read-more-btn" routerLink="/civel"><i class="fa-solid fa-angles-right"></i></a>
           </div>
         </div>
 
@@ -109,9 +52,9 @@
             <div class="card-icons">
               <img class="light-icon" src="https://imgpanda.com/upload/ib/Q4tSh2ctkH.png" alt="Ícone de qualidade" />
             </div>
-            <h3><a href="https://www.fiverr.com/aliali44">APOSENTADORIA E PENSÃO POR MORTE</a></h3>
+            <h3><a routerLink="/pensao-morte">APOSENTADORIA E PENSÃO POR MORTE</a></h3>
             <p>Aposentadoria por idade, Aposentadoria por invalidez permanente, Aposentadoria por tempo de Contribuição, Aposentadoria Especial, Pensão por morte para o menor, cônjuge e pesosa com deficiência.</p>
-            <a class="read-more-btn" href="https://www.fiverr.com/aliali44"><i class="fa-solid fa-angles-right"></i></a>
+            <a class="read-more-btn" routerLink="/pensao-morte"><i class="fa-solid fa-angles-right"></i></a>
           </div>
         </div>
 
@@ -120,12 +63,13 @@
             <div class="card-icons">
               <img class="light-icon" src="https://imgpanda.com/upload/ib/YQdOwN6IDJ.png" alt="Ícone de qualidade" />
             </div>
-            <h3><a href="https://www.fiverr.com/aliali44">CONSULTORIA EMPRESARIAL</a></h3>
+            <h3><a routerLink="/empresarial">CONSULTORIA EMPRESARIAL</a></h3>
             <p>Compliance de empresas. Tracejo das melhoras estratégicas para com funcionários, tanto na esfera Trabalhista, como na Previdenciária.</p>
-            <a class="read-more-btn" href="https://www.fiverr.com/aliali44"><i class="fa-solid fa-angles-right"></i></a>
+            <a class="read-more-btn" routerLink="/empresarial"><i class="fa-solid fa-angles-right"></i></a>
           </div>
         </div>
       </div>
     </div>
   </section>
+  <app-advogados>
   
