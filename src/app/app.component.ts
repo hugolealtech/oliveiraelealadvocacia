@@ -21,6 +21,7 @@ import { OnInit } from '@angular/core';
 import { ListaComponent } from './pages/lista/lista.component';
 import { PoliticasComponent } from './pages/politicas/politicas.component';
 import { CasosSucessoComponent } from './pages/casos-sucesso/casos-sucesso.component';
+import { AgendamentoComponent } from './components/agendamento/agendamento.component';
 
 
 @Component({
@@ -42,6 +43,7 @@ import { CasosSucessoComponent } from './pages/casos-sucesso/casos-sucesso.compo
     EmpresarialComponent,
     CivelComponent,
     CasosSucessoComponent,
+    AgendamentoComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
