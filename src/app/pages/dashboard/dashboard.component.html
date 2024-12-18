@@ -10,6 +10,7 @@
         <li>Lista de Estoque</li>
         <li>Financeiro</li>
         <li>Processos</li>
+        <li><a routerLink="/register">Cadastrar Associado</a></li>
       </ul>
   
     </aside>
@@ -19,8 +20,8 @@
       <p>Bem-vindo à área restrita!</p>
 
         <app-lista></app-lista>
-        
-      <button onclick="onLogout()">Logout</button>
+
+        <button (click)="onLogout()">Logout</button>
     </main>
  
   </div>

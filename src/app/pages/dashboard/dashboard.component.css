@@ -1,86 +1,134 @@
+/* Definições gerais do body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background: #f5f5f5;
     color: #333;
-    height: 100vh; /* Define a altura como 100% da viewport */
-    overflow: hidden;
-  }
-  
-  .dashboard-container {
-    display: flex;
-    height: 100vh; /* Garante que a altura ocupa 100% */
-    width: 100vw; /* Garante que a largura ocupa 100% */
-  }
-  
-  .sidebar {
-    width: 250px; /* Largura fixa da barra lateral */
-    background: #4c4f56;
-    color: white;
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: 100vh; /* Altura 100% da viewport */
     display: flex;
     flex-direction: column;
-  }
-  
-  .sidebar h2 {
+    overflow: hidden;
+}
+
+/* Container principal do dashboard */
+.dashboard-container {
+    display: flex;
+    height: 100vh; /* Ocupa 100% da altura */
+    width: 100vw; /* Ocupa 100% da largura */
+    overflow: hidden;
+}
+
+/* Estilos da barra lateral */
+.sidebar {
+    width: 250px; /* Largura fixa da barra lateral */
+    background-image: url('/madeiraPreta.jpg');
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15); /* Sombra mais suave */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Adiciona espaçamento entre os elementos */
+}
+
+/* Título da barra lateral */
+.sidebar h2 {
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
-    border-bottom: 1px solid #5f6268;
+    /* border-bottom: 1px solid #5f6268; */
     padding-bottom: 10px;
-  }
-  
-  .sidebar ul {
+    letter-spacing: 1px; /* Aumenta o espaçamento das letras */
+}
+
+/* Lista de links da barra lateral */
+.sidebar ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .sidebar ul li {
-    margin: 15px 0;
-    padding: 10px;
+    margin: 0;
+}
+
+/* Estilos dos itens da lista */
+.sidebar ul li {
+    margin: 10px 0;
+    padding: 12px;
     background: #5f6268;
-    border-radius: 5px;
+    border-radius: 8px; /* Bordas mais arredondadas */
     text-align: center;
     cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .sidebar ul li:hover {
+    transition: background 0.3s ease, transform 0.2s ease; /* Adiciona transição suave */
+}
+
+/* Hover nos itens da barra lateral */
+.sidebar ul li:hover {
     background: #73767e;
-  }
-  
-  .main-content {
-    flex-grow: 1; /* Faz com que o conteúdo principal ocupe o restante da largura */
+    transform: translateX(10px); /* Animação de deslizar para a direita */
+}
+
+/* Estilos do conteúdo principal */
+.main-content {
+    flex-grow: 1; /* Expande para preencher o restante da largura */
     padding: 40px;
     background: #ffffff;
-    overflow-y: auto; /* Permite rolagem caso o conteúdo exceda a altura */
-  }
-  
-  .main-content h2 {
+    overflow-y: auto;
+    transition: padding 0.3s ease;
+}
+
+/* Título do conteúdo principal */
+.main-content h2 {
     font-size: 28px;
-    margin-bottom: 10px;
-  }
-  
-  .main-content p {
+    margin-bottom: 15px;
+    font-weight: 600; /* Deixa o título mais forte */
+}
+
+/* Parágrafos do conteúdo principal */
+.main-content p {
     font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  button {
-    padding: 10px 20px;
+    margin-bottom: 25px;
+    line-height: 1.6; /* Melhora a legibilidade com mais espaçamento entre linhas */
+    color: #555; /* Um tom mais suave de cinza para o texto */
+}
+
+/* Estilos dos botões */
+button {
+    padding: 12px 25px;
     background: #4c4f56;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px; /* Bordas mais arredondadas */
     cursor: pointer;
     font-size: 16px;
-    transition: background 0.3s ease;
-  }
-  
-  button:hover {
+    font-weight: 500; /* Torna o texto mais forte */
+    transition: background 0.3s ease, transform 0.2s ease; /* Suaviza o hover e anima o botão */
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra ao botão */
+}
+
+/* Hover nos botões */
+button:hover {
     background: #5f6268;
-  }
-  
-/* Melhore essa estilização */
+    transform: translateY(-2px); /* Efeito de "elevação" ao passar o mouse */
+}
+
+/* Link dentro de itens da lista */
+li > a {
+    text-decoration: none;
+    color: inherit; /* Garante que o link use a cor do item */
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+}
