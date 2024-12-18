@@ -1,0 +1,125 @@
+<div class="container">
+    <div class="row pt-3">
+      <div class="col-6">
+        <h4>Lista de Agendamentos</h4>
+      </div>
+  
+      <div class="col-6 text-end">
+        <button class="btn btn-warning" (click)="openModel()">Adicionar</button>
+      </div>
+    </div>
+  
+    @if (clientList.length !== 0) {
+    <div class="row">
+      @for (item of clientList; track $index) {
+      <div class="col-3 pt-2">
+        <div class="card">
+          <div class="card-header">
+            <div class="row">
+              <div class="col-6">
+                {{item.name}}
+              </div>
+              <div class="col-6 text-end">
+                {{item.mobileNo}}
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <p> {{item.city}} , {{item.state}} , {{item.pincode}}</p>
+            <p> {{item.address}}</p>
+          </div>
+          <div class="card-footer text-center">
+            <div class="row">
+              <div class="col-6 p-0">
+               <small>{{item.email}}</small> 
+              </div>
+              <div class="col-6">
+                <button class="btn btn-sm btn-primary " (click)="onEdit(item)">Editar</button>
+                <button class="btn btn-sm btn-danger" (click)="onDelete(item)">Deletar</button>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  
+    } @else { 
+      <div class="row">
+        <div class="col-12 p-4 text-center">
+          <p>Clique em "Adicionar" para inserir na lista um novo agendamento.</p>
+        </div>
+      </div>
+    }
+  </div>
+  
+  
+  <div class="modal" id="myModal" #myModal>
+  
+    <div class="modal-dialog">
+    <!-- Conteúdo -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Adicionar um novo agendamento</h4>
+          <button type="button" class="btn-close" (click)="closeModel()"></button>
+        </div>
+  
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-8">
+              <label for="">Nome</label>
+              <input type="text" [(ngModel)]="clientObj.name" class="form-control" placeholder="Nome">
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-6">
+              <label for="">WhatsApp</label>
+              <input type="text" [(ngModel)]="clientObj.mobileNo" class="form-control" placeholder="WhatsApp">
+            </div>
+  
+            <div class="col-6">
+              <label for="">E-mail</label>
+              <input type="text" [(ngModel)]="clientObj.email" class="form-control" placeholder="Email">
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-4">
+              <label for="">Cidade</label>
+              <input type="text" [(ngModel)]="clientObj.city" class="form-control" placeholder="Cidade">
+            </div>
+  
+            <div class="col-4">
+              <label for="">Estado</label>
+              <input type="text" [(ngModel)]="clientObj.state" class="form-control" placeholder="Estado">
+            </div>
+  
+            <div class="col-4">
+              <label for="">CEP</label>
+              <input type="text" [(ngModel)]="clientObj.pincode" class="form-control" placeholder="Código Postal">
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-12">
+              <label for="">Endereço</label>
+              <textarea rows="3" [(ngModel)]="clientObj.address" class="form-control"></textarea>
+            </div>
+          </div>
+        </div>
+  
+        <div class="modal-footer">
+  
+          <button type="button" class="btn btn-danger" (click)="closeModel()">Fechar</button>
+          @if (clientObj.id ==0) {
+            <button type="button" class="btn btn-primary" (click)="save()">Salvar</button>
+          } @else {
+            <button type="button" class="btn btn-success" (click)="update()">Atualizar</button>
+          }
+         
+        </div>
+      </div>
+    </div>
+  </div>
