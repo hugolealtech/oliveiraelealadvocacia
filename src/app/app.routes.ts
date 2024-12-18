@@ -25,6 +25,7 @@ import { FaqComponent } from './pages/faq/faq.component';
 import { ListaComponent } from './pages/lista/lista.component';
 import { PoliticasComponent } from './pages/politicas/politicas.component';
 import { CasosSucessoComponent } from './pages/casos-sucesso/casos-sucesso.component';
+import { AgendamentoComponent } from './components/agendamento/agendamento.component';
 
 export const routes: Routes = [
     { path: 'home', component: HomeComponent},
@@ -52,6 +53,7 @@ export const routes: Routes = [
     { path: 'lista', component:ListaComponent},
     { path: 'politicas', component:PoliticasComponent},
     { path: 'casos-sucesso', component:CasosSucessoComponent},
+    { path: 'agendamento', component:AgendamentoComponent},
     // { path: 'login-cliente',component:LoginComponent},
 
 
