@@ -2,8 +2,8 @@
 
   <form [formGroup]="form" (ngSubmit)="onSubmit()" class="login-form">
 
-    <p class="heading">Login</p>
-    <p class="paragraph">Autenticação Firebase</p>
+    <p class="heading">Login Administrativo</p>
+    <!-- <p class="paragraph">Autenticação Firebase</p> -->
 
     <!-- Exibindo a mensagem de erro -->
     @if (errorMessage) {
@@ -24,10 +24,7 @@
     
     <button type="submit">Entrar</button>
 
-    <div class="bottom-text">
-      <p>Você não tem uma conta? <a routerLink="/register">Registre-se</a></p>
-      <p><a href="#">Esqueceu a senha?</a></p>
-    </div>
+   
 
   </form>
 
