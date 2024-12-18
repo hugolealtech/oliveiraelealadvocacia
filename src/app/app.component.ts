@@ -19,6 +19,7 @@ import { AuthService } from './autenticacao/auth.service';
 import { HeaderComponent } from './components/header/header.component';
 import { OnInit } from '@angular/core';
 import { ListaComponent } from './pages/lista/lista.component';
+import { PoliticasComponent } from './pages/politicas/politicas.component';
 
 
 @Component({
@@ -34,6 +35,7 @@ import { ListaComponent } from './pages/lista/lista.component';
     AdvogadosComponent,
     BPCComponent,
     ListaComponent,
+    PoliticasComponent,
     PensaoMorteComponent,
     PlanejamentoPrevidenciarioComponent,
     EmpresarialComponent,

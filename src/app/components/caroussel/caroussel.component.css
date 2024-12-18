@@ -1,8 +1,15 @@
 
+#myCaroussel{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
 .carousel-item {
     width: 100%; /* Faz a imagem ocupar 100% da largura do carrossel */
     height: 500px; /* Ajuste a altura do carrossel */
     object-fit: cover; /* Mantém a imagem sem distorção */
+    
+    margin-bottom: 40px;
 
 }
 
