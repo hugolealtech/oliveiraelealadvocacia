@@ -5,6 +5,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
+import { CommonModule } from '@angular/common';
 
 type Meeting = {
   date: string;
@@ -25,6 +26,7 @@ type Meeting = {
     MatButtonModule,
     MatSnackBarModule,
     MatDialogModule,
+    CommonModule,
   ],
 })
 export class AgendamentoComponent {
