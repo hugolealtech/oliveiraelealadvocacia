@@ -4,16 +4,48 @@
 
   <form [formGroup]="meetingForm" (ngSubmit)="editingMeeting ? saveChanges() : addMeeting()">
     <div class="form-group">
-      <input formControlName="date" placeholder="Data" type="date" required class="form-control" />
-      <input formControlName="time" placeholder="Hora" type="time" required class="form-control" />
-      <input formControlName="participants" placeholder="Participantes" type="text" required class="form-control" />
-      <input formControlName="description" placeholder="Descrição" type="text" required class="form-control" />
+      <input
+        formControlName="date"
+        placeholder="Data"
+        type="date"
+        required
+        class="form-control"
+      />
+      <input
+        formControlName="time"
+        placeholder="Hora"
+        type="time"
+        required
+        class="form-control"
+      />
+      <input
+        formControlName="participants"
+        placeholder="Participantes"
+        type="text"
+        required
+        class="form-control"
+      />
+      <input
+        formControlName="description"
+        placeholder="Descrição"
+        type="text"
+        required
+        class="form-control"
+      />
     </div>
 
     <div class="form-buttons">
-      <button type="submit" class="btn btn-primary">{{ editingMeeting ? 'Salvar Alterações' : 'Adicionar Reunião'
-        }}</button>
-      <button type="button" *ngIf="editingMeeting" (click)="cancelEditing()" class="btn btn-secondary">Cancelar</button>
+      <button type="submit" class="btn btn-primary">
+        {{ editingMeeting ? 'Salvar Alterações' : 'Adicionar Reunião' }}
+      </button>
+      <button
+        type="button"
+        *ngIf="editingMeeting"
+        (click)="cancelEditing()"
+        class="btn btn-secondary"
+      >
+        Cancelar
+      </button>
     </div>
   </form>
 
@@ -42,8 +74,12 @@
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef>Ações</th>
       <td mat-cell *matCellDef="let element">
-        <button (click)="editMeeting(element)" class="btn btn-warning">Editar</button>
-        <button (click)="deleteMeeting(element)" class="btn btn-danger">Excluir</button>
+        <button (click)="editMeeting(element)" class="btn btn-warning">
+          Editar
+        </button>
+        <button (click)="deleteMeeting(element)" class="btn btn-danger">
+          Excluir
+        </button>
       </td>
     </ng-container>
 

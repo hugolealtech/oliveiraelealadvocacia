@@ -26,7 +26,7 @@ type Meeting = {
     MatButtonModule,
     MatSnackBarModule,
     MatDialogModule,
-    CommonModule,
+    CommonModule, 
   ],
 })
 export class AgendamentoComponent {
