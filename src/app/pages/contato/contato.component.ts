@@ -28,15 +28,15 @@ export class ContatoComponent {
 
       emailjs
         .send(
-          'service_hbqeiv9', // Substitua pelo seu Service ID
-          'template_nu94t26', // Substitua pelo seu Template ID
+          'service_n78usyh', // Substitua pelo seu Service ID
+          'template_r3rxxrk', // Substitua pelo seu Template ID
           {
             name: formData.name,
             telefone: formData.telefone,
             email: formData.email,
             message: formData.message,
           },
-          '6OmwV3Y29ZXQxiAt2' // Substitua pela sua Public Key
+          'Eix71PvPb8mRO55Fr' // Substitua pela sua Public Key
         )
         .then(
           (response) => {
